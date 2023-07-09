@@ -1,0 +1,73 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = vgg 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 4 key-value pairs.
+Below are 4 of them:
+ 1 key:                Dog_02.jpg.jpeg  label:                        dog
+ 2 key:                    Car.jpg.jpg  label:                           
+ 3 key:                Dog_01.jpg.jpeg  label:                        dog
+ 4 key:                 Cat_01.jpg.jpg  label:                        cat
+{'Dog_02.jpg.jpeg': ['dog', 'german shepherd, german shepherd dog, german police dog, alsatian', 1], 'Car.jpg.jpg': ['', 'sports car, sport car', 1], 'Dog_01.jpg.jpeg': ['dog', 'german shepherd, german shepherd dog, german police dog, alsatian', 1], 'Cat_01.jpg.jpg': ['cat', 'siamese cat, siamese, cat', 1]}
+
+     MATCH:
+
+               Dog_02.jpg.jpeg: 
+Real:                        dog   Classifier: german shepherd, german shepherd dog, german police dog, alsatian
+
+                   Car.jpg.jpg: 
+Real:                              Classifier:          sports car, sport car
+
+               Dog_01.jpg.jpeg: 
+Real:                        dog   Classifier: german shepherd, german shepherd dog, german police dog, alsatian
+
+                Cat_01.jpg.jpg: 
+Real:                        cat   Classifier:      siamese cat, siamese, cat
+
+ NOT A MATCH:
+
+# Total Images 4 # Matches: 4 # NOT Matches: 0
+
+     MATCH:
+
+               Dog_02.jpg.jpeg: 
+Real:                        dog   Classifier: german shepherd, german shepherd dog, german police dog, alsatian  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                   Car.jpg.jpg: 
+Real:                              Classifier:          sports car, sport car  
+PetLabelDog: 0  ClassLabelDog: 0
+
+               Dog_01.jpg.jpeg: 
+Real:                        dog   Classifier: german shepherd, german shepherd dog, german police dog, alsatian  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                Cat_01.jpg.jpg: 
+Real:                        cat   Classifier:      siamese cat, siamese, cat  
+PetLabelDog: 0  ClassLabelDog: 0
+
+ NOT A MATCH:
+
+# Total Images 4 # Matches: 4 # NOT Matches: 0
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog:  66.7 Pct Corr NOTdog: 100.0  Pct Corr Breed:  66.7
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed: 100.0
+
+
+*** Results Summary for CNN Model Architecture VGG ***
+N Images            :   4
+N Dog Images        :   2
+N Not Dog Images    :   2
+ 
+pct_match 100.0
+pct_correct_dogs 66.66666666666666
+pct_correct_breed 66.66666666666666
+pct_correct_notdogs 100.0
+
+** Total Elapsed Runtime: 0:0:8
